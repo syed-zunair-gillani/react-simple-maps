@@ -6,19 +6,19 @@ export default function Login() {
 
   return (
     <>
-      <div className='login-bg w-full h-screen flex justify-center items-center flex-col'>
-        <h2 className='text-3xl md:text-4xl lg:text-6xl text-center text-white'><span className='bg-white text-black p-1  font-semibold rounded-md'>True</span> Phone</h2>
+      <div className='flex flex-col items-center justify-center w-full h-screen login-bg'>
+        <h2 className='text-3xl text-center text-white md:text-4xl lg:text-6xl'><span className='p-1 font-semibold text-black bg-white rounded-md'>True</span> Phone</h2>
         <div className='bg-gray-100 mt-10 sm:rounded-2xl text-center max-w-[480px] py-10'>
           <h3 className='text-3xl font-semibold'>Log in</h3>
-          <p className='mt-2 px-4 lg:px-10'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+          <p className='px-4 mt-2 lg:px-10'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
           <form >
             <div className='bg-white'>
               <div className='relative'>
-                <div className='absolute top-3 left-2 text-2xl'><BsPersonCircle /></div>
+                <div className='absolute text-2xl top-3 left-2'><BsPersonCircle /></div>
                 <input id="email-address" name="email" type="email" autocomplete="email" required class="relative mt-10 block w-full appearance-none bg-transparent rounded-none border-gray-300 px-10 py-3 text-gray-900  border-b-2 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-md" placeholder="Email address" />
               </div>
               <div class="relative">
-                <div className='absolute top-3 left-2 text-2xl'><Si1Password /></div>
+                <div className='absolute text-2xl top-3 left-2'><Si1Password /></div>
                 <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full appearance-none bg-transparent rounded-none  px-10 py-3 text-gray-900 placeholder-gray-500 focus:z-10 focus:outline-none sm:text-md" placeholder="Password" />
               </div>
             </div>
