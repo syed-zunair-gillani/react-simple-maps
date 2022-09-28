@@ -23,9 +23,9 @@ const MapChart = () => {
   const router = useRouter();
   console.log("🚀 ~ file: mapChart.js ~ line 24 ~ MapChart ~ router", router)
   const {locale} = router
-  router.asPath === '/fr/en-US' && router.push('http://localhost:3000/en-US') 
+  router.asPath === '/fr/en-US' && router.push('https://react-custom-map.netlify.app/en-US') 
   const handleLangRoute = path =>{
-    path === 'en-US' ? router.push('http://localhost:3000/en-US') : router.push('http://localhost:3000/fr')
+    path === 'en-US' ? router.push('https://react-custom-map.netlify.app/en-US') : router.push('https://react-custom-map.netlify.app/fr')
   }
 
 
