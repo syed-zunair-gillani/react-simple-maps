@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { enUS, enFR } from '../../translation'
+import { enUS, enFR } from '../public/translation'
 
 export default function Hero() {
     const router = useRouter()
