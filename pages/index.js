@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import MapChart from '../components/mapChart';
+import Hero from '../components/hero';
 
 
 export default function Home({posts}) {
@@ -13,6 +14,7 @@ export default function Home({posts}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Hero/>
       
       <div className='h-screen _map'>
       <MapChart/>

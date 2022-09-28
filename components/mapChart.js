@@ -6,16 +6,29 @@ import {
   Graticule,
   Marker
 } from "react-simple-maps";
+import { useRouter } from 'next/router'
 
-const geoUrl =
-  "https://raw.githubusercontent.com/deldersveld/topojson/master/continents/europe.json";
-  const markers = [
-   
-    { markerOffset: -15, name: "Germany", coordinates: [10.648860, 51.106400] , path:"Germany"},
-    { markerOffset: -15, name: "Austria", coordinates: [14.243120, 47.568840] , path:"Austria"},
-    
-  ];
+const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/continents/europe.json";
+const markers = [
+
+  { markerOffset: -15, name: "France", coordinates: [10.648860, 51.106400], path: "fr" },
+  { markerOffset: -15, name: "Turky", coordinates: [29.544689, 36.997540], path: "en-US" },
+
+];
+
+
+
 const MapChart = () => {
+
+  const router = useRouter();
+  console.log("🚀 ~ file: mapChart.js ~ line 24 ~ MapChart ~ router", router)
+  const {locale} = router
+  router.asPath === '/fr/en-US' && router.push('http://localhost:3000/en-US') 
+  const handleLangRoute = path =>{
+    path === 'en-US' ? router.push('http://localhost:3000/en-US') : router.push('http://localhost:3000/fr')
+  }
+
+
   return (
     <ComposableMap
       width={800}
@@ -30,17 +43,21 @@ const MapChart = () => {
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
           geographies.map((geo) => (
-            <Geography
-              key={geo.rsmKey}
-              geography={geo}
-              fill="#9998A3"
-              stroke="#EAEAEC"
-            />
+
+            <>
+              {/* {console.log(geo)} */}
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                fill="#9998A3"
+                stroke="#EAEAEC"
+              />
+            </>
           ))
         }
       </Geographies>
       {markers.map(({ name, coordinates, markerOffset, path }) => (
-        <Marker key={name} coordinates={coordinates} onClick={()=> alert(path)} className="cursor-pointer">
+        <Marker key={name} coordinates={coordinates} onClick={() => handleLangRoute(path)} className="cursor-pointer">
           <circle r={10} fill="#F00" stroke="#fff" strokeWidth={2} />
           <text
             textAnchor="middle"
