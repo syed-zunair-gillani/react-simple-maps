@@ -8,3 +8,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+.cursor{
+  pointer-events: none !important;
+  mix-blend-mode: difference;
+  background: orange;
+}
+
+._map>svg{
+  max-height: 100vh;
+    width: 100%;
+}
