@@ -4,7 +4,8 @@ import {
   Geographies,
   Geography,
   Graticule,
-  Marker
+  Marker,
+  Annotation
 } from "react-simple-maps";
 import { useRouter } from 'next/router'
 
@@ -85,7 +86,6 @@ const MapChart = () => {
           })
         }
       </Geographies>
-    
 
       {markers.map(({ name, coordinates, markerOffset, path }) => (
         <Marker key={name} coordinates={coordinates} onClick={() => handleLangRoute(path)} className="cursor-pointer">
@@ -95,10 +95,42 @@ const MapChart = () => {
             y={markerOffset}
             style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
           >
-            {name} 
+            
           </text>
         </Marker>
       ))}
+
+
+      <Annotation
+        subject={[10.451526, 51.165691]}
+        dx={-90}
+        dy={-30}
+        connectorProps={{
+          stroke: "#FF5533",
+          strokeWidth: 3,
+          strokeLinecap: "round"
+        }}
+      >
+        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#F53">
+          {"Germany (2022)"}
+        </text>
+      </Annotation>
+
+      <Annotation
+        subject={[35.243320, 38.963745]}
+        dx={90}
+        dy={120}
+        connectorProps={{
+          stroke: "#FF5533",
+          strokeWidth: 3,
+          strokeLinecap: "round"
+        }}
+      >
+        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#F53">
+          {"Turky (2022)"}
+        </text>
+      </Annotation>
+
     </ComposableMap>
   );
 };
