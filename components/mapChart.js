@@ -19,7 +19,6 @@ const markers = [
 ];
 
 const GeographyC = ({ key, geography, backgroung }) => {
-  console.log("🚀 ~ file: mapChart.js ~ line 22 ~ GeographyC ~ backgroung", backgroung)
   return (
     <Geography
       key={key}
@@ -61,9 +60,7 @@ const MapChart = () => {
         }
       </Geographies>
 
-      /* A grid of lines that are drawn on the map. */
       <Graticule stroke="#EAEAEC" />
-
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
           geographies.map((geo) => {
