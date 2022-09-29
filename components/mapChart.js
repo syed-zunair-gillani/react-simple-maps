@@ -13,8 +13,8 @@ const geoWorldUrl = "https://raw.githubusercontent.com/deldersveld/topojson/mast
 
 const markers = [
 
-  { markerOffset: -15, name: "France", coordinates: [10.648860, 51.106400], path: "fr" },
-  { markerOffset: -15, name: "Turky", coordinates: [35.243320, 38.963745], path: "tur" },
+  { markerOffset: -15, name: "Germany (2022)", coordinates: [10.451526, 51.165691], path: "fr" },
+  { markerOffset: -15, name: "Turky (2022)", coordinates: [35.243320, 38.963745], path: "tur" },
 
 ];
 
@@ -95,7 +95,7 @@ const MapChart = () => {
             y={markerOffset}
             style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
           >
-            {name}
+            {name} 
           </text>
         </Marker>
       ))}
