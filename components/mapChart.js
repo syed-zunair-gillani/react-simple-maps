@@ -14,7 +14,7 @@ const geoWorldUrl = "https://raw.githubusercontent.com/deldersveld/topojson/mast
 const markers = [
 
   { markerOffset: -15, name: "France", coordinates: [10.648860, 51.106400], path: "fr" },
-  { markerOffset: -15, name: "Turky", coordinates: [35.243320, 38.963745], path: "en-US" },
+  { markerOffset: -15, name: "Turky", coordinates: [35.243320, 38.963745], path: "tur" },
 
 ];
 
@@ -32,9 +32,9 @@ const GeographyC = ({ key, geography, backgroung }) => {
 const MapChart = () => {
 
   const router = useRouter();
-  router.asPath === '/fr/en-US' && router.push('https://react-custom-map.netlify.app/en-US')
+  router.asPath === '/fr/tur' && router.push('https://react-custom-map.netlify.app/tur')
   const handleLangRoute = path => {
-    path === 'en-US' ? router.push('https://react-custom-map.netlify.app/en-US') : router.push('https://react-custom-map.netlify.app/fr')
+    path === 'tur' ? router.push('https://react-custom-map.netlify.app/tur') : router.push('https://react-custom-map.netlify.app/fr')
   }
 
 

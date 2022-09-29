@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 const geoWorldUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 const markers = [
 
-  { markerOffset: -15, name: "Georgia", coordinates: [-82.900078, 32.165623], path: "en-US" },
+  { markerOffset: -15, name: "Georgia", coordinates: [-82.900078, 32.165623], path: "tur" },
 
 ];
 
@@ -20,9 +20,9 @@ const markers = [
 const Turky = () => {
 
   const router = useRouter();
-  router.asPath === '/fr/en-US' && router.push('https://react-custom-map.netlify.app/en-US') 
+  router.asPath === '/fr/en-US' && router.push('https://react-custom-map.netlify.app/tur') 
   const handleLangRoute = path =>{
-    path === 'en-US' ? router.push('https://react-custom-map.netlify.app/en-US') : router.push('https://react-custom-map.netlify.app/fr')
+    path === 'en-US' ? router.push('https://react-custom-map.netlify.app/tur') : router.push('https://react-custom-map.netlify.app/fr')
   }
 
 

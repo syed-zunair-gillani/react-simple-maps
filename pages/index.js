@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Login</title>
+        <title>Landing</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
