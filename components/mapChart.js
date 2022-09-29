@@ -49,17 +49,6 @@ const MapChart = () => {
       }}
     >
 
-      <Geographies geography={geoUrl}>
-        {({ geographies }) =>
-          geographies.map((geo) => (
-            <>
-              {/* {console.log('geo', geo.properties.geounit === 'Bulgaria')} */}
-              <strong>{geo.rsmKey}</strong>-<span>{geo.properties.geounit}</span>
-            </>
-          ))
-        }
-      </Geographies>
-
       <Graticule stroke="#EAEAEC" />
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
