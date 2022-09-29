@@ -79,18 +79,7 @@ const MapChart = () => {
               case "Greece": return <GeographyC key={geo.rsmKey} geography={geo} backgroung="#00319B" />
               case "Montenegro": return <GeographyC key={geo.rsmKey} geography={geo} backgroung="#DE332C" />
               case "Kosovo": return <GeographyC key={geo.rsmKey} geography={geo} backgroung="#CAA14D" />
-              default: return <>
-                {
-                  console.log(geo.properties.geounit)
-                }
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  fill="#e5e5e5"
-                  stroke="#EAEAEC"
-                />
-                
-              </>
+              default: return <GeographyC key={geo.rsmKey} geography={geo} backgroung="#e5e5e5" />
             }
           })
         }
@@ -100,47 +89,14 @@ const MapChart = () => {
         {({ geographies }) =>
           geographies.map((geo) => {
             switch (geo.properties.name) {
-              case "Turkey": return <Geography
-                key={geo.rsmKey}
-                geography={geo}
-                fill="#DB0916"
-                stroke="#EAEAEC"
-              />
-
+              case "Turkey": return <GeographyC key={geo.rsmKey} geography={geo} backgroung="#DB0916" />
+              case "Azerbaijan": return <GeographyC key={geo.rsmKey} geography={geo} backgroung="#4D992D" />
+              case "Georgia": return <GeographyC key={geo.rsmKey} geography={geo} backgroung="#EAEAEA" />
             }
           })
         }
       </Geographies>
-      {/* Azerbaijan map */}
-      <Geographies geography={geoWorldUrl}>
-        {({ geographies }) =>
-          geographies.map((geo) => {
-            switch (geo.properties.name) {
-              case "Azerbaijan": return <Geography
-                key={geo.rsmKey}
-                geography={geo}
-                fill="#4D992D"
-                stroke="#EAEAEC"
-              />
-            }
-          })
-        }
-      </Geographies>
-      {/* Georgia map */}
-      <Geographies geography={geoWorldUrl}>
-        {({ geographies }) =>
-          geographies.map((geo) => {
-            switch (geo.properties.name) {
-              case "Georgia": return <Geography
-                key={geo.rsmKey}
-                geography={geo}
-                fill="#EAEAEA"
-                stroke="#EAEAEC"
-              />
-            }
-          })
-        }
-      </Geographies>
+    
 
       {markers.map(({ name, coordinates, markerOffset, path }) => (
         <Marker key={name} coordinates={coordinates} onClick={() => handleLangRoute(path)} className="cursor-pointer">
