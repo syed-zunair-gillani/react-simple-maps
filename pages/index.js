@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <Hero/> */}
+      <Hero/>
       
       <div className='h-screen _map'>
       <MapChart/>
