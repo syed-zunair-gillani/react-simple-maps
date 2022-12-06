@@ -4,7 +4,7 @@ import { enUS, enFR } from '../public/translation'
 export default function Hero() {
     const router = useRouter()
     const {locale} = router
-    const t = locale === "en-US" ? enUS : enFR
+    const t = locale === "tur" ? enUS : enFR
 
     return (
         <div className='flex items-center justify-center w-full h-screen'>
